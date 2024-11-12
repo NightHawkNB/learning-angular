@@ -29,4 +29,8 @@ export class UserService {
         }
     );
   }
+
+  changePassword(previousPassword: string, newPassword: string, confirmPassword: string) : void {
+    console.log({previousPassword, newPassword, confirmPassword})
+  }
 }
