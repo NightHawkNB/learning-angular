@@ -1,10 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+    --background-color: #bfdfcf;
+}
+
+* {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
 html, body { height: 100%; }
 body {
     margin: 0;
     font-family: sans-serif;
-    max-height: 100vh;
+    max-height: 100%;
+    background-color: var(--background-color);
 }
 
 .page-content-item {
@@ -29,5 +38,43 @@ body {
         button {
             background-color: aqua;
         }
+    }
+}
+
+/* Styles for Login and Change password pages */
+.page-wrapper {
+    background-color: var(--background-color);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        width: 400px;
+        height: 420px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
+            padding: 20px 40px;
+
+            input {
+                color: white;
+            }
+        }
+    }
+
+    h1 {
+        text-align: center;
+        padding: 20px;
+        font-size: 2rem;
+        font-family: "Berlin Sans FB", sans-serif;
+        color: lightgreen;
     }
 }

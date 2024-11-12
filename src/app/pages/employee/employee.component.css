@@ -1,5 +1,5 @@
 .employee {
-  background-color: lightgreen;
+  background-color: var(--background-color);
   height: 100%;
 }
 

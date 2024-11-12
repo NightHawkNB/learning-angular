@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule }  from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -42,6 +44,8 @@ import { ChangePasswordComponent } from './pages/change-password/change-password
     MatTableModule,
     MatIconModule,
     MatPaginatorModule,
+    MatInputModule,
+    ReactiveFormsModule,
     HttpClientModule,
   ],
   providers: [],
