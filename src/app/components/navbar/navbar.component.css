@@ -11,7 +11,11 @@
     justify-content: space-between;
 
     .navbar-inner {
-      padding: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
     .navbar-items ul {
