@@ -1,0 +1,18 @@
+.page {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* overflow-x: hidden; */
+
+  .page-content {
+    background-color: blue;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    align-content: stretch;
+    height: 100%;
+  }
+}
