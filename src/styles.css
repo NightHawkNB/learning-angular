@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: sans-serif; }
+body {
+    margin: 0;
+    font-family: sans-serif;
+    max-height: 100vh;
+}
 
 .page-content-item {
   padding: 10px;
@@ -10,4 +14,20 @@ body { margin: 0; font-family: sans-serif; }
     font-weight: 500;
     font-size: 1.5rem;
   }
+}
+
+.button-icons {
+    display: flex;
+    gap: 15px;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        cursor: pointer;
+
+        button {
+            background-color: aqua;
+        }
+    }
 }

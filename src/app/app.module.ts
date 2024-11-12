@@ -9,15 +9,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule }  from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatIconModule } from '@angular/material/icon';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { HomeComponent } from './home/home.component';
-import { EmployeeComponent } from './employee/employee.component';
-import { DashboardComponent } from './container/dashboard/dashboard.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { EmployeeComponent } from './pages/employee/employee.component';
+import { DashboardLayoutComponent } from './container/dashboard-layout/dashboard-layout.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { DashboardComponent } from './container/dashboard/dashboard.component';
     SidebarComponent,
     HomeComponent,
     EmployeeComponent,
-    DashboardComponent
+    DashboardLayoutComponent,
+    LoginComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,7 @@ import { DashboardComponent } from './container/dashboard/dashboard.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatTableModule,
+    MatIconModule,
     MatPaginatorModule,
     HttpClientModule,
   ],
