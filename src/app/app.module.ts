@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // ? Importing Angular Material Modules
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule }  from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HomeComponent } from './home/home.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { DashboardComponent } from './container/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { EmployeeComponent } from './employee/employee.component';
     FooterComponent,
     SidebarComponent,
     HomeComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { EmployeeComponent } from './employee/employee.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatTableModule,
+    MatPaginatorModule,
     HttpClientModule,
   ],
   providers: [],
