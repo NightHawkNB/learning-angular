@@ -7,11 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // ? Importing Angular Material Modules
 import { MatButtonModule } from '@angular/material/button';
-import { MatTableModule }  from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -25,30 +25,30 @@ import { LoginComponent } from './pages/login/login.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    SidebarComponent,
-    HomeComponent,
-    EmployeeComponent,
-    DashboardLayoutComponent,
-    LoginComponent,
-    ChangePasswordComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatTableModule,
-    MatIconModule,
-    MatPaginatorModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        FooterComponent,
+        SidebarComponent,
+        HomeComponent,
+        EmployeeComponent,
+        DashboardLayoutComponent,
+        LoginComponent,
+        ChangePasswordComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatTableModule,
+        MatIconModule,
+        MatPaginatorModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

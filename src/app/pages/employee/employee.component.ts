@@ -1,35 +1,33 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { user } from '../../models/userModel';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-employee',
-  templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.css']
+    selector: 'app-employee',
+    templateUrl: './employee.component.html',
+    styleUrls: ['./employee.component.css'],
 })
 export class EmployeeComponent implements OnInit, AfterViewInit {
+    constructor(private userService: UserService) {}
 
-  constructor(private userService : UserService) { }
+    ngAfterViewInit() {
+        this.dataSource.paginator = this.paginator;
+    }
 
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-  }
+    @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+    employees: user[] = [];
 
-  employees: user[] = [];
+    ngOnInit(): void {
+        this.userService.getAllUsers().subscribe((res: user[]) => {
+            this.employees = res;
+            this.dataSource.data = this.employees;
+        });
+    }
 
-  ngOnInit(): void {
-    this.userService.getAllUsers().subscribe((res : user[]) => {
-      this.employees = res;
-      this.dataSource.data = this.employees;
-    });
-  }
+    columnsToDisplay = ['id', 'name', 'username', 'email', 'phone'];
 
-  columnsToDisplay = ['id', 'name', 'username', 'email', 'phone'];
-
-  dataSource = new MatTableDataSource<user>(this.employees);
-
+    dataSource = new MatTableDataSource<user>(this.employees);
 }

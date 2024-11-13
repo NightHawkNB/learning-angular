@@ -5,17 +5,29 @@
         <form [formGroup]="applyForm" (submit)="submitApplication()">
             <mat-form-field appearance="outline" color="accent">
                 <mat-label>Username</mat-label>
-                <input formControlName="username" type="email" matInput placeholder="Username">
+                <input
+                    formControlName="username"
+                    type="email"
+                    matInput
+                    placeholder="Username"
+                />
                 <mat-icon color="accent" matSuffix>person</mat-icon>
                 <mat-hint>Hint</mat-hint>
             </mat-form-field>
             <mat-form-field appearance="outline" color="accent">
                 <mat-label>Password</mat-label>
-                <input formControlName="password" type="password" matInput placeholder="Password">
+                <input
+                    formControlName="password"
+                    type="password"
+                    matInput
+                    placeholder="Password"
+                />
                 <mat-icon color="accent" matSuffix>password</mat-icon>
                 <mat-hint>Hint</mat-hint>
             </mat-form-field>
-            <button mat-raised-button color="accent" type="submit">Login</button>
+            <button mat-raised-button color="accent" type="submit">
+                Login
+            </button>
         </form>
     </div>
 </div>

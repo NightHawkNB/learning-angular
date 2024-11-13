@@ -5,32 +5,35 @@ import { user } from '../models/userModel';
 import { LoginRequest } from '../models/loginRequest';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root',
 })
 export class UserService {
+    private baseUrl = 'https://jsonplaceholder.typicode.com/';
 
-  private baseUrl = "https://jsonplaceholder.typicode.com/";
+    constructor(private http: HttpClient) {}
 
-  constructor(private http : HttpClient) { }
+    getAllUsers(): Observable<user[]> {
+        return this.http.get<user[]>(this.baseUrl + 'users');
+    }
 
-  getAllUsers() : Observable<user[]> {
-    return this.http.get<user[]>(this.baseUrl + "users");
-  }
-
-  saveUser(username: string, password: string) : Observable<user> {
-    console.log({username, password})
-    return this.http.post<user>(
-        this.baseUrl + "users",
-        {username, password}, //* Body
-        {
-            headers: {
-                'Content-Type': 'application/json'
+    saveUser(username: string, password: string): Observable<user> {
+        console.log({ username, password });
+        return this.http.post<user>(
+            this.baseUrl + 'users',
+            { username, password }, //* Body
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
             }
-        }
-    );
-  }
+        );
+    }
 
-  changePassword(previousPassword: string, newPassword: string, confirmPassword: string) : void {
-    console.log({previousPassword, newPassword, confirmPassword})
-  }
+    changePassword(
+        previousPassword: string,
+        newPassword: string,
+        confirmPassword: string
+    ): void {
+        console.log({ previousPassword, newPassword, confirmPassword });
+    }
 }

@@ -18,12 +18,17 @@ export class LoginComponent implements OnInit {
 
     //? Event for form submission
     submitApplication() {
-        this.userService.saveUser(this.applyForm.value.username, this.applyForm.value.password).subscribe((res: user) => {
-            console.log(res);
-        })
+        this.userService
+            .saveUser(
+                this.applyForm.value.username,
+                this.applyForm.value.password
+            )
+            .subscribe((res: user) => {
+                console.log(res);
+            });
     }
 
-    constructor(private userService : UserService) {}
+    constructor(private userService: UserService) {}
 
     ngOnInit(): void {}
 }

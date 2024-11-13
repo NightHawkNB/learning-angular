@@ -1,28 +1,27 @@
 .sidebar {
-  background-color: rgb(218, 131, 230);
-  height: 100%;
+    background-color: rgb(218, 131, 230);
+    height: 100%;
 
-  h2 {
-    color: black;
-    padding: 10px;
-    font-size: 1.4rem;
-  }
-
-  ul {
-    padding: 10px;
-    color: white;
-    font-size: 15px;
-
-    a {
-      text-decoration: none;
-      color: white;
-      min-width: 100%;
-
-      button {
-        width: 100%;
-        margin-bottom: 20px;
-      }
+    h2 {
+        color: black;
+        padding: 10px;
+        font-size: 1.4rem;
     }
-  }
 
+    ul {
+        padding: 10px;
+        color: white;
+        font-size: 15px;
+
+        a {
+            text-decoration: none;
+            color: white;
+            min-width: 100%;
+
+            button {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
