@@ -27,7 +27,7 @@ export class EmployeeComponent implements OnInit, AfterViewInit {
         });
     }
 
-    columnsToDisplay = ['id', 'name', 'username', 'email', 'phone'];
+    columnsToDisplay = ['id', 'name', 'username', 'email', 'phone','actions'];
 
     dataSource = new MatTableDataSource<user>(this.employees);
 }

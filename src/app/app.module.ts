@@ -11,6 +11,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule  } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -23,6 +24,7 @@ import { EmployeeComponent } from './pages/employee/employee.component';
 import { DashboardLayoutComponent } from './container/dashboard-layout/dashboard-layout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
+import { DetailsComponent } from './pages/employee/details/details.component';
 
 @NgModule({
     declarations: [
@@ -35,6 +37,7 @@ import { ChangePasswordComponent } from './pages/change-password/change-password
         DashboardLayoutComponent,
         LoginComponent,
         ChangePasswordComponent,
+        DetailsComponent,
     ],
     imports: [
         BrowserModule,
@@ -45,6 +48,7 @@ import { ChangePasswordComponent } from './pages/change-password/change-password
         MatIconModule,
         MatPaginatorModule,
         MatInputModule,
+        MatCardModule,
         ReactiveFormsModule,
         HttpClientModule,
     ],

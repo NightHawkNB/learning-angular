@@ -1,0 +1,17 @@
+.details-wrapper {
+    background-color: var(--background-color);
+    height: 100%;
+    padding: 10px;
+
+    h1 {
+        font-weight: 500;
+    }
+
+    .attribute {
+        font-weight: 500;
+    }
+}
+
+table {
+    width: 100%;
+}

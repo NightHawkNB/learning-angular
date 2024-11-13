@@ -16,6 +16,10 @@ export class UserService {
         return this.http.get<user[]>(this.baseUrl + 'users');
     }
 
+    getSingleUser(userId: number): Observable<user> {
+        return this.http.get<user>(this.baseUrl + 'users/' + userId);
+    }
+
     saveUser(username: string, password: string): Observable<user> {
         console.log({ username, password });
         return this.http.post<user>(
