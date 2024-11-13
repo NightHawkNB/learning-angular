@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { LoginRequest } from 'src/app/models/loginRequest';
 import { user } from 'src/app/models/userModel';
 import { UserService } from 'src/app/services/user.service';
 
