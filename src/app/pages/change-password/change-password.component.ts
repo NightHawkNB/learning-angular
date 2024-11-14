@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validator, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -13,9 +13,9 @@ export class ChangePasswordComponent implements OnInit {
     ngOnInit(): void {}
 
     applyForm = new FormGroup({
-        previousPassword: new FormControl(''),
-        newPassword: new FormControl(''),
-        confirmPassword: new FormControl(''),
+        previousPassword: new FormControl('', [Validators.required]),
+        newPassword: new FormControl('', [Validators.required]),
+        confirmPassword: new FormControl('', [Validators.required]),
     });
 
     changePassword() {

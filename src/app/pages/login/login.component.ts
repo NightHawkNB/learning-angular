@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
 
     //? Event for form submission
     submitApplication() {
-        this.userService
+        if(this.applyForm.valid) {
+            this.userService
             .saveUser(
                 this.applyForm.value.username,
                 this.applyForm.value.password
@@ -25,6 +26,9 @@ export class LoginComponent implements OnInit {
             .subscribe((res: user) => {
                 console.log(res);
             });
+        } else {
+            console.log('Invalid login credentials');
+        }
     }
 
     constructor(private userService: UserService) {}
