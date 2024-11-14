@@ -19,12 +19,24 @@ export class EmployeeComponent implements OnInit, AfterViewInit {
     @ViewChild(MatPaginator) paginator!: MatPaginator;
 
     employees: user[] = [];
+    filteredEmployees: user[] = [];
 
     ngOnInit(): void {
         this.userService.getAllUsers().subscribe((res: user[]) => {
             this.employees = res;
+            this.filteredEmployees = res;
             this.dataSource.data = this.employees;
         });
+    }
+
+    handleFilter(searchTerm : string) {
+        if(!searchTerm) {
+            this.dataSource.data = this.employees;
+        } else {
+            this.dataSource.data = this.employees.filter(employee => {
+                return employee.name.toLowerCase().includes(searchTerm.toLowerCase())
+            })
+        }
     }
 
     columnsToDisplay = ['id', 'name', 'username', 'email', 'phone','actions'];

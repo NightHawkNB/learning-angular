@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { user } from 'src/app/models/userModel';
 import { UserService } from 'src/app/services/user.service';
 
@@ -11,8 +11,8 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginComponent implements OnInit {
     //? Represents the data format collected from the form
     applyForm = new FormGroup({
-        username: new FormControl(''),
-        password: new FormControl(''),
+        username: new FormControl('', [Validators.required, Validators.email]),
+        password: new FormControl('', [Validators.required]),
     });
 
     //? Event for form submission

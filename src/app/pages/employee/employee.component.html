@@ -2,6 +2,22 @@
     <h1>Employee</h1>
     <p style="font-weight: 500">List of Employees</p>
 
+    <div class="search-container">
+        <mat-form-field appearance="outline" color="accent" style="max-height: fit-content;">
+            <input
+                formControlName="searchTerm"
+                type="text"
+                matInput
+                placeholder="Search by name"
+                #filter
+            />
+            <mat-icon color="accent" matSuffix>search</mat-icon>
+        </mat-form-field>
+        <button mat-raised-button color="accent" (click)="handleFilter(filter.value)" class="search-btn">
+            Search
+        </button>
+    </div>
+
     <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
             <!-- Id Column -->
